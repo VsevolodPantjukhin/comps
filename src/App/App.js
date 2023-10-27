@@ -1,7 +1,23 @@
+import Button from '../components/Button/Button';
+
 const App = () => {
   return (
     <div>
-      <div>App</div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
+      <div>
+        <Button />
+      </div>
     </div>
   );
 };
