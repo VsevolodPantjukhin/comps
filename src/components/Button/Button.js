@@ -10,7 +10,7 @@ const Button = ({
   outline,
   rounded,
 }) => {
-  return <button>{children}</button>;
+  return <button className="bg-blue-900">{children}</button>;
 };
 
 Button.propTypes = {
