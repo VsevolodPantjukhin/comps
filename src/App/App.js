@@ -1,28 +1,21 @@
-import Accordion from '../components/Accordion/Accordion';
+import Dropdown from '../components/Dropdown/Dropdown';
 
 const App = () => {
-  const items = [
+  const options = [
     {
-      id: 'vkdsfnlkb',
-      label: 'Can I use React on a project?',
-      content:
-        'You can use React on any project you want. You can use React on any project you want. You can use React on any project you want.',
+      label: 'Red',
+      value: 'red',
     },
     {
-      id: 'ks809igjdf',
-      label: 'Can I use JavaScript on a project?',
-      content:
-        'You can use JavaScript on any project you want. You can use JavaScript on any project you want. You can use JavaScript on any project you want.',
+      label: 'Green',
+      value: 'green',
     },
     {
-      id: 'aju6jnjcp9ln',
-      label: 'Can I use CSS on a project?',
-      content:
-        'You can use CSS on any project you want. You can use CSS on any project you want. You can use CSS on any project you want.',
+      label: 'Blue',
+      value: 'blue',
     },
   ];
-
-  return <Accordion items={items} />;
+  return <Dropdown options={options} />;
 };
 
 export default App;
