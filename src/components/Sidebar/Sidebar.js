@@ -15,6 +15,10 @@ const Sidebar = () => {
       path: '/buttons',
     },
     {
+      label: 'Table',
+      path: '/table',
+    },
+    {
       label: 'Modal',
       path: '/modal',
     },
