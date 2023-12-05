@@ -1,8 +1,13 @@
-const Table = () => {
+const Table = ({ data }) => {
   return (
-    <div>
-      <div>Table</div>
-    </div>
+    <table>
+      <thead>
+        <tr>Fruit</tr>
+        <tr>Color</tr>
+        <tr>Score</tr>
+      </thead>
+      <tbody></tbody>
+    </table>
   );
 };
 export default Table;
