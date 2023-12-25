@@ -22,6 +22,10 @@ const Sidebar = () => {
       label: 'Modal',
       path: '/modal',
     },
+    {
+      label: 'Counter',
+      path: '/counter',
+    },
   ];
   const renderedLinks = links.map((link) => {
     return (
