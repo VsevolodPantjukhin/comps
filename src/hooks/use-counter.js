@@ -16,4 +16,4 @@ const useCounter = (initialCount) => {
     increment,
   };
 };
-export { useCounter };
+export default useCounter;

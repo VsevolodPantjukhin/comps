@@ -1,5 +1,5 @@
 import Button from '../components/Button/Button';
-import { useCounter } from '../hooks/use-counter';
+import useCounter from '../hooks/use-counter';
 
 const CounterPage = ({ initialCount }) => {
   const { count, increment } = useCounter(initialCount);
