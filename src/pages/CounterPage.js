@@ -4,6 +4,8 @@ import Panel from '../components/Panel/Panel';
 
 const INCREMENT_COUNT = 'increment-count';
 const SET_VALUE_TO_ADD = 'set-value-to-add';
+const DECREMENT_COUNT = 'decrement-count';
+const ADD_VALUE_TO_COUNT = 'add-value-to-count';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -12,10 +14,21 @@ const reducer = (state, action) => {
         ...state,
         count: state.count + 1,
       };
+    case DECREMENT_COUNT:
+      return {
+        ...state,
+        count: state.count - 1,
+      };
     case SET_VALUE_TO_ADD:
       return {
         ...state,
         valueToAdd: action.payload,
+      };
+    case ADD_VALUE_TO_COUNT:
+      return {
+        ...state,
+        count: state.count + state.valueToAdd,
+        valueToAdd: 0,
       };
     default:
       return state;
@@ -39,6 +52,9 @@ const CounterPage = ({ initialCount }) => {
 
   const decrement = () => {
     // setCount(count - 1);
+    dispatch({
+      type: DECREMENT_COUNT,
+    });
   };
 
   const handleChange = (event) => {
@@ -53,8 +69,10 @@ const CounterPage = ({ initialCount }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // setCount(count + valueToAdd);
-    // setValueToAdd(0);
+
+    dispatch({
+      type: ADD_VALUE_TO_COUNT,
+    });
   };
   return (
     <Panel className="m-3">
